@@ -1,3 +1,5 @@
+# What is BlackJack ? ->  https://en.wikipedia.org/wiki/Blackjack
+
 import random
 from art_BlackJack import logo
 
