@@ -1,3 +1,4 @@
+# What is a Hang man ? --> https://en.wikipedia.org/wiki/Hangman_(game)
 import random
 
 from hangman_words import word_list
