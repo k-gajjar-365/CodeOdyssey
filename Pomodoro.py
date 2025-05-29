@@ -1,3 +1,6 @@
+# What is a Pomodoro Timer ? --> [Click Here](https://en.wikipedia.org/wiki/Pomodoro_Technique)
+
+
 from tkinter import *
 import math
 
@@ -54,7 +57,7 @@ def count_down(count):
     timer_sec = count % 60
     if timer_sec < 10:
         timer_sec = f"0{timer_sec}"
-        
+
 # --------------or---------------- #
     # if timer_sec == 0:
     #     timer_sec = "00"
