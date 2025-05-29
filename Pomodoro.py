@@ -1,4 +1,4 @@
-# What is a Pomodoro Timer ? --> [Click Here](https://en.wikipedia.org/wiki/Pomodoro_Technique)
+# What is a Pomodoro Timer ? --> https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 
 from tkinter import *
