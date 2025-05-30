@@ -79,7 +79,7 @@ def count_down(count):
 
 # ---------------------------- WINDOW EXIT ------------------------------- #
 
-def exit_screen():
+def exit_screen(): 
     is_ok = messagebox.askokcancel(title="Exit?",message="Are you sure you want to Quit ?")
     
     if is_ok:
