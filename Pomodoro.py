@@ -3,6 +3,7 @@
 
 from tkinter import *
 import math
+from tkinter import messagebox
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -79,35 +80,10 @@ def count_down(count):
 # ---------------------------- WINDOW EXIT ------------------------------- #
 
 def exit_screen():
-    global message,yes,no
-    window.config(padx=33, pady=22)
-
-    timer_label.config(text="")
-    exit_button.grid_forget()
-
-    message = Label(text="Are you sure you want to Quit?",bg=YELLOW,fg="#FE7743",font=("Georgia",15,"bold"))
-    message.grid(column=1,row=0)
-
-    yes = Button(text="EXIT",command=clicked_yes,fg="red")
-    yes.grid(column=0,row=1)
-
-    no = Button(text="CANCEL",command=clicked_no,fg="blue")
-    no.grid(column=2,row=1)
-
-
-def clicked_yes():
-    window.destroy()
-def clicked_no():
-    window.config(padx=100,pady=50,bg=YELLOW)
-
-    timer_label.config(text="Timer", font=(FONT_NAME, 40, "bold"), bg=YELLOW, fg=GREEN)
-    exit_button.config(text="Quit",command=exit_screen,fg="red")
-    exit_button.grid(column=2,row=2)
-
-    global message,yes,no
-    message.destroy()
-    yes.destroy()
-    no.destroy()
+    is_ok = messagebox.askokcancel(title="Exit?",message="Are you sure you want to Quit ?")
+    
+    if is_ok:
+        window.destroy()
 
 # ---------------------------- UI SETUP ------------------------------- #
 
