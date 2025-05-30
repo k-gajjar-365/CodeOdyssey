@@ -2,8 +2,10 @@ from tkinter import *
 from tkinter import messagebox
 from random import randint,shuffle,choice
 import pyperclip
+import json
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
 #Password Generator Project
 def generate_password():
     if len(p_entry.get()) > 0:
@@ -26,6 +28,27 @@ def generate_password():
     p_entry.insert(0,password)
     pyperclip.copy(password)
 
+# ---------------------------- Search Credentials ------------------------------- #
+
+def search_credentials():
+    try:
+        with open("data.json",mode="r") as file:
+            user_data = json.load(file)
+            website_name = w_entry.get()
+            is_found = False
+            for data in user_data:
+                try:
+                    if str(data).lower() == website_name.lower():
+                        messagebox.showinfo(title=website_name,message=f"Email : {user_data[data]["Email"]}\nPassword : {user_data[data]["Password"]}")
+                        is_found=True
+                        break
+                except KeyError:
+                    messagebox.showerror(title="Error",message=f"{website_name} not found!")
+            if not is_found:
+                messagebox.showerror(title="Error",message=f"No data found for \"{website_name}\" website in the file")
+    except FileNotFoundError:
+        messagebox.showerror(title="Error",message="Data file does not found.")
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def add_to_file():
@@ -33,17 +56,33 @@ def add_to_file():
         messagebox.showwarning(title="page says",message="Please don't leave any of fields empty.")
         return
 
+    new_data = {
+        w_entry.get() :{
+        "Email":e_entry.get(),
+        "Password":p_entry.get()
+        }
+    }
     is_ok = messagebox.askokcancel(title="page says",message=f"Details :\nEmail : {e_entry.get()}\n"
                                                              f"Password : {p_entry.get()}\n"         
                                                         f"Are you sure you want to save it ? ")
     if is_ok:
-        with open(file="data.txt",mode="a+") as file:
-            file.write(f"{w_entry.get()} | {e_entry.get()} | {p_entry.get()}\n")
+        try:
+            with open("data.json",mode="r") as file:
+                data = json.load(file)
+                data.update(new_data)
+                with open("data.json", "w") as file2:
+                    json.dump(data, file2, indent=4)
+        except FileNotFoundError:
+            with open("data.json", mode="w") as file:
+                json.dump(new_data,file,indent=4)
+
         w_entry.delete(0,END)
         e_entry.delete(0,END)
         p_entry.delete(0,END)
         w_entry.focus()
+        
 # ---------------------------- UI SETUP ------------------------------- #
+
 FONT = ("Arial",10,"bold")
 
 window = Tk()
@@ -60,9 +99,13 @@ canvas.grid(column=1,row=0)
 website = Label(text="Website : ",font=FONT)
 website.grid(column=0,row=1)
 # text field for website
-w_entry = Entry(width=36)
-w_entry.grid(column=1,row=1,columnspan=2)
+w_entry = Entry(width=25)
+w_entry.place(x=125,y=200)
 w_entry.focus()
+
+#search button
+search = Button(text="Search",width=7,command=search_credentials)
+search.place(x=283,y=198)
 
 # Email username label
 email_username = Label(text="Email/Username : ",font=FONT)
