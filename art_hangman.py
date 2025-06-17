@@ -1,4 +1,4 @@
-stages = [r'''
+stages = [r''' 
   +---+
   |   |
   O   |
