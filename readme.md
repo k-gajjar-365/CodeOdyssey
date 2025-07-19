@@ -12,6 +12,7 @@ Welcome to the **Code Odyssey**! This collection showcases a variety of small bu
 - **Mile-to-Km Converter (GUI using Tkinter)** 🌍 – A graphical tool for converting miles to kilometers.
 - **Password Manager (GUI using Tkinter)** 🔐 - A secure, minimal password manager for storing credentials.
 - **[Pomodoro Timer](https://en.wikipedia.org/wiki/Pomodoro_Technique) (GUI using Tkinter)** ⏳ – A productivity-enhancing timer following the Pomodoro technique.
+- **Tic Tac Toe**❌⭕ – A console-based two-player game using a 5x5 grid display. Includes input validation, winner/draw detection logic, and replay functionality with a clean and interactive interface.
 
 ## 🛠 Technologies Used
 This repository features projects utilizing:
