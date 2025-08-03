@@ -13,6 +13,8 @@ Welcome to the **Code Odyssey**! This collection showcases a variety of small bu
 - **Password Manager (GUI using Tkinter)** 🔐 - A secure, minimal password manager for storing credentials.
 - **[Pomodoro Timer](https://en.wikipedia.org/wiki/Pomodoro_Technique) (GUI using Tkinter)** ⏳ – A productivity-enhancing timer following the Pomodoro technique.
 - **Tic Tac Toe**❌⭕ – A console-based two-player game using a 5x5 grid display. Includes input validation, winner/draw detection logic, and replay functionality with a clean and interactive interface.
+- 🛍️ **Cart Page UI** – Built with HTML, CSS & JavaScript, this interface allows users to add and remove items from a dynamic shopping cart. It provides e-commerce experience with live cart updates and a clean design.
+- 💸 **Expense Tracker UI** – A responsive spending tracker using HTML, CSS & JavaScript. Users can input expenses, view totals, and manage entries in real time for simple, streamlined budgeting.
 
 ## 🛠 Technologies Used
 This repository features projects utilizing:
@@ -20,6 +22,7 @@ This repository features projects utilizing:
 - Tkinter for GUI-based applications 🖥️
 - Fundamental algorithms for encryption and game logic 🎮
 - Command-line interactions for user engagement 🖱️
+- HTML, CSS & JavaScript🪽
 
 ## 🔧 Setup & Usage
 To get started, clone the repository:
