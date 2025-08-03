@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cont">
+        <h1>Products</h1>
+        <div id="product-list">
+            <!--list of products-->
+        </div>
+
+        <h2>Shoppig cart</h2>
+
+        <div id="cart-items">
+        </div>
+        <p id="empty-cart">Your cart is empty.</p>
+        
+        <div id="cart-total" class="hidden">
+            <p>Total : <span id="total-price">$0.00</span></p>
+            <button id="checkout-btn" class="btn btn-primary">Checkout</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
