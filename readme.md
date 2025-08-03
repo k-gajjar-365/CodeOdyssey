@@ -22,6 +22,7 @@ This repository features projects utilizing:
 - Tkinter for GUI-based applications 🖥️
 - Fundamental algorithms for encryption and game logic 🎮
 - Command-line interactions for user engagement 🖱️
+- HTML, CSS & JavaScript🪽
 
 ## 🔧 Setup & Usage
 To get started, clone the repository:
