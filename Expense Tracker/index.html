@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="cont">
+        <h1>Expense Tracker</h1>
+        <div id="form">
+            <form action="#">
+            <input required type="text" id="expense-name" placeholder="Expense name">
+            <input required type="text" id="amt" placeholder="Amount">
+            <button class="btn btn-info" id="add-expense">Add Expense</button>
+            </form>
+        </div>
+        <h2>Expenses</h2>
+        <div>
+            <!-- Expenses list here. -->
+             <ul id="expense-list">
+                <!-- <div class="i">
+                <li class="item">Expense 1</li>
+                <button class="btn btn-danger">Delete</button>
+                </div> -->
+             </ul>
+        </div>
+
+        <div id="total">
+        <h3>Total :</h3><span id="total-amount"> $0.00</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
